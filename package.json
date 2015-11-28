@@ -4,10 +4,7 @@
   "description": "Portfolio",
   "main": "",
   "scripts": {
-    "init": "npm install",
-    "install": "bower install",
-    "start": "node src/server/server.js",
-    "test": "gulp test"
+    "start": "node src/server/server.js"
   },
   "keywords": [],
   "author": "Kenrick Wu",

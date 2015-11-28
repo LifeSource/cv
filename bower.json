@@ -1,18 +1,20 @@
 {
-    "name": "Portfolio",
-    "version": "1.0.0",
-    "description": "Portfolio",
-    "authors": [],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "devDependencies": {
-        "sinon": "http://sinonjs.org/releases/sinon-1.12.1.js",
-        "bardjs": "^0.1.4"
-    }
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "sinon": "http://sinonjs.org/releases/sinon-1.12.1.js",
+    "bardjs": "^0.1.4"
+  },
+  "homepage": "https://github.com/LifeSource/cv",
+  "main": "",
+  "moduleType": []
 }
