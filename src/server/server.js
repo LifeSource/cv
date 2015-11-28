@@ -9,7 +9,6 @@ var environment = process.env.NODE_ENV || "dev";
 // database setup
 // mongoose.connect("mongodb://localhost/<appName>")
 
-
 // api goes here.
 
 // static files
@@ -28,9 +27,10 @@ switch (environment) {
         app.use(express.static(config.client));
         app.use(express.static(config.root));
         app.use("/*", express.static(config.index));
+
+        app.listen(config.port, function () {
+            console.log("Server started, listening on port: " + config.port);
+        });
+
         break;
 }
-
-app.listen(config.port, function () {
-    console.log("Server started, listening on port: " + config.port);
-});
