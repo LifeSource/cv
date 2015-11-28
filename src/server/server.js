@@ -6,7 +6,7 @@ var config = require("../../config")();
 
 var app = express();
 
-var environment = config.env;
+var environment = process.env.NODE_ENV || "dev";
 
 // database setup
 // mongoose.connect("mongodb://localhost/<appName>")
@@ -21,8 +21,8 @@ app.use(bodyParser.json());
 switch (environment) {
     case 'production':
         console.log("**** BUILD ****");
-        app.use(express.static(config.build));
-        app.use("/*", express.static(config.build + "index.html"));
+        app.use(express.static("./build"));
+        app.use("/*", express.static("./build/ndex.html"));
         break;
     default:
         console.log("**** DEV ****");
