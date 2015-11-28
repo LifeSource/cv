@@ -1,4 +1,3 @@
-var wiredep = require("wiredep");
 
 module.exports = function () {
 
@@ -17,7 +16,8 @@ module.exports = function () {
     	temp = root + "temp/",
         report = root + "report/",
         specRunnerFile = "specs.html",
-        bowerFiles = wiredep({devDependencies: true})['js'], // jshint ignore:line
+//        wiredep = require("wiredep"),
+//        bowerFiles = wiredep({devDependencies: true})['js'], // jshint ignore:line
     	nodeModules = root + "node_modules/",
         jspmPackages = root + "jspm_packages/",
     	bowerComponents = root + "bower_components/",
@@ -134,7 +134,7 @@ module.exports = function () {
     function getKarmaOptions() {
         var options = {
             files: [].concat(
-                bowerFiles,
+            //    bowerFiles,
                 config.specHelpers,
                 clientApp + '**/*.module.js',
                 clientApp + '**/*.js',
