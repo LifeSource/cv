@@ -1,3 +1,5 @@
+var wiredep = require("wiredep");
+
 module.exports = function () {
 
     var port = process.env.PORT || 3000,
@@ -15,7 +17,6 @@ module.exports = function () {
     	temp = root + "temp/",
         report = root + "report/",
         specRunnerFile = "specs.html",
-    //    wiredep = require('wiredep'),
         bowerFiles = wiredep({devDependencies: true})['js'], // jshint ignore:line
     	nodeModules = root + "node_modules/",
         jspmPackages = root + "jspm_packages/",
