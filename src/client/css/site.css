@@ -1,0 +1,10 @@
+.site-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+body {
+  font-family: "Open Sans", arial, sans-serif;
+}
+.details {
+  text-align: center;
+}
