@@ -4,10 +4,14 @@ var express = require("express"),
 
 var app = express();
 
+var port = process.env.PORT || 8000;
 var environment = process.env.NODE_ENV || "dev";
 
 // database setup
 // mongoose.connect("mongodb://localhost/<appName>")
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // api goes here.
 
@@ -22,15 +26,12 @@ switch (environment) {
         console.log("**** DEV ****");
         var config = require("../../config")();
         // middleware setup
-        app.use(bodyParser.urlencoded({ extended: true }));
-        app.use(bodyParser.json());
-        app.use(express.static(config.client));
-        app.use(express.static(config.root));
-        app.use("/*", express.static(config.index));
-
-        app.listen(config.port, function () {
-            console.log("Server started, listening on port: " + config.port);
-        });
-
+        app.use(express.static("./src/client/"));
+        app.use(express.static("./"));
+        app.use("/*", express.static("./src/client/index.html"));
         break;
 }
+
+app.listen(port, function() {
+    console.log("Server started, listening on port: " + port);
+});
